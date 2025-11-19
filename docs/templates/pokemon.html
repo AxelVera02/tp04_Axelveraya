@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Pokémon - PokéAPI</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="pokemon-page">
+    <!-- FONDO DECORATIVO -->
+    <div class="fondo-decorativo pokemon-bg">
+        <div class="pokebola-decorativa"></div>
+        <div class="ondas-pokemon"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-api header-pokemon">
+        <div class="contenedor-header">
+            <div class="icono-header pokemon-icono">
+                <img src="../static/images/pokemon.png" alt="Pokémon API" class="imagen-icono">
+            </div>
+            <h1 class="titulo-api">Pokémon API</h1>
+            <p class="subtitulo-api">Busca información de tus Pokémon favoritos</p>
+            <p class="descripcion-api">Powered by PokéAPI</p>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="contenedor-principal">
+        <!-- SECCIÓN DE BÚSQUEDA -->
+        <section class="seccion-busqueda seccion-pokemon">
+            <div class="contenedor-busqueda">
+                <div class="titulo-seccion pokemon-titulo">
+                    <h2>🔍 Buscar Pokémon</h2>
+                    <p>Ingresa el nombre o ID para encontrar tu Pokémon favorito</p>
+                </div>
+                
+                <form id="formulario-pokemon" class="formulario-busqueda">
+                    <div class="grupo-busqueda">
+                        <input 
+                            type="text" 
+                            id="pokemon-input" 
+                            placeholder="Ingresa nombre o ID del Pokémon..." 
+                            required
+                        >
+                        <button type="submit" class="boton-buscar">
+                            🔍 Buscar
+                        </button>
+                    </div>
+                </form>
+
+                <!-- INDICADOR DE CARGA -->
+                <div id="indicador-carga" class="indicador-carga oculto">
+                    <div class="spinner"></div>
+                    <p>Cargando datos del Pokémon...</p>
+                </div>
+
+                <!-- MENSAJE DE ERROR -->
+                <div id="mensaje-error" class="mensaje-error oculto"></div>
+
+                <!-- RESULTADOS DEL POKÉMON -->
+                <div id="resultados-pokemon" class="resultados-pokemon oculto">
+                    <div class="tarjeta-pokemon">
+                        <div class="pokemon-header">
+                            <img id="imagen-pokemon" class="imagen-pokemon" src="" alt="Pokémon">
+                            <h2 id="nombre-pokemon" class="nombre-pokemon"></h2>
+                        </div>
+
+                        <div class="detalles-pokemon">
+                            <div class="detalle-pokemon">
+                                <span class="etiqueta">ID</span>
+                                <span id="id-pokemon" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pokemon">
+                                <span class="etiqueta">Tipo</span>
+                                <span id="tipo-pokemon" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pokemon">
+                                <span class="etiqueta">Peso</span>
+                                <span id="peso-pokemon" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pokemon">
+                                <span class="etiqueta">Altura</span>
+                                <span id="altura-pokemon" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pokemon">
+                                <span class="etiqueta">Velocidad</span>
+                                <span id="velocidad-pokemon" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pokemon">
+                                <span class="etiqueta">Ataque</span>
+                                <span id="ataque-pokemon" class="valor">-</span>
+                            </div>
+                        </div>
+
+                        <div class="habilidades-pokemon">
+                            <h3>Habilidades</h3>
+                            <div id="habilidades-lista" class="habilidades-lista"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DE AYUDA -->
+                <div class="info-ayuda">
+                    <h3>💡 Consejos</h3>
+                    <ul>
+                        <li>Busca por nombre: "pikachu", "charizard", etc.</li>
+                        <li>O busca por ID numérico: "1", "25", "6", etc.</li>
+                        <li>Se muestran estadísticas completas y habilidades</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Explorador de APIs | Axel Vera y Aragón | Powered by PokéAPI</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/pokemon.js"></script>
+</body>
+</html>

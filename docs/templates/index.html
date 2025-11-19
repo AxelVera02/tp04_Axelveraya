@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de APIs - Inicio</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <!-- HEADER CON BIENVENIDA -->
+    <header class="header-principal">
+        <h1 class="titulo-principal">🌐 Explorador de APIs</h1>
+        <p class="subtitulo">Descubre datos fascinantes de múltiples fuentes</p>
+    </header>
+
+    <!-- SECCIÓN DE BIENVENIDA -->
+    <section class="bienvenida-section">
+        <div class="contenedor-bienvenida">
+            <div id="mensaje-bienvenida" class="mensaje-bienvenida">
+                <h2>¡Bienvenido!</h2>
+                <p>Por favor, ingresa tu nombre y apellido para continuar</p>
+            </div>
+
+            <!-- FORMULARIO DE BIENVENIDA -->
+            <form id="formulario-bienvenida" class="formulario-bienvenida">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                </div>
+
+                <button type="submit" class="boton-enviar">Entrar</button>
+            </form>
+
+            <!-- ÁREA DE USUARIO AUTENTICADO (OCULTA AL INICIO) -->
+            <div id="area-usuario" class="area-usuario oculto">
+                <h2 id="saludo-usuario" class="saludo-usuario"></h2>
+                <p class="mensaje-usuario">¡Hola de nuevo! Selecciona una API para explorar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE NAVEGACIÓN (BOTONES DE APIs) -->
+    <section class="seccion-botones">
+        <div class="contenedor-botones">
+            <!-- BOTON INICIO -->
+            <a href="#" id="boton-inicio" class="boton boton-inicio" onclick="volverAlInicio(event)">
+                <span class="icono-boton">🏠</span>
+                <span class="texto-boton">Inicio</span>
+            </a>
+
+            <!-- BOTON CLIMA -->
+            <a href="clima.html" class="boton boton-clima">
+                <img src="../static/images/clima.png" alt="API del Clima" class="icono-boton-img">
+                <span class="texto-boton">API del Clima</span>
+            </a>
+
+            <!-- BOTON PAÍSES -->
+            <a href="paises.html" class="boton boton-paises">
+                <img src="../static/images/paises.png" alt="API de Países" class="icono-boton-img">
+                <span class="texto-boton">API de Países</span>
+            </a>
+
+            <!-- BOTON POKÉMON -->
+            <a href="pokemon.html" class="boton boton-pokemon">
+                <img src="../static/images/pokemon.png" alt="Pokémon API" class="icono-boton-img">
+                <span class="texto-boton">API Pokémon</span>
+            </a>
+
+            <!-- BOTON RICK & MORTY -->
+            <a href="rick.html" class="boton boton-rick">
+                <img src="../static/images/rick.png" alt="Rick & Morty API" class="icono-boton-img">
+                <span class="texto-boton">Rick & Morty</span>
+            </a>
+
+            <!-- BOTON CRIPTOMONEDAS -->
+            <a href="cripto.html" class="boton boton-cripto">
+                <img src="../static/images/cripto.png" alt="Criptomonedas API" class="icono-boton-img">
+                <span class="texto-boton">Criptomonedas</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Explorador de APIs | Axel Vera y Aragón | Desarrollado con ❤️</p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD -->
+    <script src="../js/script_bienvenida.js"></script>
+</body>
+</html>

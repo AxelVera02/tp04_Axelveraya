@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptomonedas - CoinGecko</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="cripto-page">
+    <!-- FONDO DECORATIVO -->
+    <div class="fondo-decorativo cripto-bg">
+        <div class="moneda-decorativa"></div>
+        <div class="graficos-fondo"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-api header-cripto">
+        <div class="contenedor-header">
+            <div class="icono-header cripto-icono">
+                <img src="../static/images/cripto.png" alt="Criptomonedas API" class="imagen-icono">
+            </div>
+            <h1 class="titulo-api">Criptomonedas</h1>
+            <p class="subtitulo-api">Consulta precios en tiempo real de criptomonedas</p>
+            <p class="descripcion-api">Powered by CoinGecko API</p>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="contenedor-principal">
+        <!-- SECCIÓN DE BÚSQUEDA -->
+        <section class="seccion-busqueda seccion-cripto">
+            <div class="contenedor-busqueda">
+                <div class="titulo-seccion cripto-titulo">
+                    <h2>📊 Seleccionar Criptomoneda</h2>
+                    <p>Elige una criptomoneda para ver su precio y datos en tiempo real</p>
+                </div>
+                
+                <form id="formulario-cripto" class="formulario-cripto">
+                    <div class="grupo-cripto">
+                        <select id="cripto-select" class="cripto-select" required>
+                            <option value="">-- Selecciona una criptomoneda --</option>
+                            <option value="bitcoin">Bitcoin (BTC)</option>
+                            <option value="ethereum">Ethereum (ETH)</option>
+                            <option value="cardano">Cardano (ADA)</option>
+                            <option value="solana">Solana (SOL)</option>
+                            <option value="ripple">Ripple (XRP)</option>
+                            <option value="polkadot">Polkadot (DOT)</option>
+                            <option value="dogecoin">Dogecoin (DOGE)</option>
+                            <option value="litecoin">Litecoin (LTC)</option>
+                            <option value="chainlink">Chainlink (LINK)</option>
+                            <option value="uniswap">Uniswap (UNI)</option>
+                        </select>
+                        <button type="submit" class="boton-buscar">
+                            📊 Consultar
+                        </button>
+                    </div>
+                </form>
+
+                <!-- INDICADOR DE CARGA -->
+                <div id="indicador-carga" class="indicador-carga oculto">
+                    <div class="spinner"></div>
+                    <p>Cargando datos de la criptomoneda...</p>
+                </div>
+
+                <!-- MENSAJE DE ERROR -->
+                <div id="mensaje-error" class="mensaje-error oculto"></div>
+
+                <!-- RESULTADOS DE LA CRIPTO -->
+                <div id="resultados-cripto" class="resultados-cripto oculto">
+                    <div class="tarjeta-cripto">
+                        <div class="cripto-header">
+                            <h2 id="nombre-cripto" class="nombre-cripto"></h2>
+                            <span id="simbolo-cripto" class="simbolo-cripto"></span>
+                        </div>
+
+                        <div class="detalles-cripto">
+                            <div class="detalle-cripto principal">
+                                <span class="etiqueta">Precio USD</span>
+                                <span id="precio-cripto" class="valor-grande">-</span>
+                            </div>
+                            <div class="detalle-cripto">
+                                <span class="etiqueta">Cambio 24h</span>
+                                <span id="cambio24-cripto" class="valor">-</span>
+                            </div>
+                            <div class="detalle-cripto">
+                                <span class="etiqueta">Cambio 7d</span>
+                                <span id="cambio7-cripto" class="valor">-</span>
+                            </div>
+                            <div class="detalle-cripto">
+                                <span class="etiqueta">Market Cap</span>
+                                <span id="marketcap-cripto" class="valor">-</span>
+                            </div>
+                            <div class="detalle-cripto">
+                                <span class="etiqueta">Volumen 24h</span>
+                                <span id="volumen-cripto" class="valor">-</span>
+                            </div>
+                            <div class="detalle-cripto">
+                                <span class="etiqueta">Supply Circulante</span>
+                                <span id="supply-cripto" class="valor">-</span>
+                            </div>
+                        </div>
+
+                        <div class="ultimas-actualizaciones">
+                            <p id="fecha-actualizacion" class="fecha-actualizacion">Última actualización: -</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DE AYUDA -->
+                <div class="info-ayuda">
+                    <h3>💡 Consejos</h3>
+                    <ul>
+                        <li>Selecciona una criptomoneda del listado desplegable</li>
+                        <li>Los precios se actualizan en tiempo real desde CoinGecko</li>
+                        <li>Puedes ver cambios de precio en 24h y 7 días</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Explorador de APIs | Axel Vera y Aragón | Powered by CoinGecko</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/cripto.js"></script>
+</body>
+</html>

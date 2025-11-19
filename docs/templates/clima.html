@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API del Clima - OpenWeather</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="clima-page">
+    <!-- FONDO DECORATIVO -->
+    <div class="fondo-decorativo clima-bg">
+        <div class="nube-decorativa"></div>
+        <div class="lluvia-fondo"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-api header-clima">
+        <div class="contenedor-header">
+            <div class="icono-header clima-icono">
+                <img src="../static/images/clima.png" alt="API del Clima" class="imagen-icono">
+            </div>
+            <h1 class="titulo-api">API del Clima</h1>
+            <p class="subtitulo-api">Consulta el clima de cualquier ciudad del mundo</p>
+            <p class="descripcion-api">Powered by OpenWeather API</p>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="contenedor-principal">
+        <!-- SECCIÓN DE BÚSQUEDA -->
+        <section class="seccion-busqueda seccion-clima">
+            <div class="contenedor-busqueda">
+                <div class="titulo-seccion clima-titulo">
+                    <h2>🔍 Buscar Ciudad</h2>
+                    <p>Ingresa el nombre de una ciudad para obtener datos climáticos en tiempo real</p>
+                </div>
+                
+                <form id="formulario-clima" class="formulario-clima">
+                    <div class="grupo-busqueda">
+                        <input 
+                            type="text" 
+                            id="ciudad-input" 
+                            placeholder="Ingresa el nombre de la ciudad..." 
+                            required
+                        >
+                        <button type="submit" class="boton-buscar">
+                            🔍 Buscar
+                        </button>
+                    </div>
+                </form>
+
+                <!-- INDICADOR DE CARGA -->
+                <div id="indicador-carga" class="indicador-carga oculto">
+                    <div class="spinner"></div>
+                    <p>Cargando datos del clima...</p>
+                </div>
+
+                <!-- MENSAJE DE ERROR -->
+                <div id="mensaje-error" class="mensaje-error oculto"></div>
+
+                <!-- RESULTADOS DEL CLIMA -->
+                <div id="resultados-clima" class="resultados-clima oculto">
+                    <div class="tarjeta-clima">
+                        <div class="clima-header">
+                            <h2 id="nombre-ciudad" class="nombre-ciudad"></h2>
+                            <div class="horas-contenedor">
+                                <div class="hora-item">
+                                    <span class="etiqueta-hora">Tu Hora Local</span>
+                                    <p id="hora-local" class="hora-local"></p>
+                                </div>
+                                <div class="hora-item">
+                                    <span class="etiqueta-hora">Hora en la Ciudad</span>
+                                    <p id="hora-ciudad" class="hora-ciudad"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clima-icono-temp">
+                            <div id="icono-clima" class="icono-clima"></div>
+                            <div class="temperatura-principal">
+                                <span id="temperatura" class="temperatura"></span>
+                                <span class="unidad">°C</span>
+                            </div>
+                        </div>
+
+                        <p id="descripcion-clima" class="descripcion-clima"></p>
+
+                        <div class="detalles-clima">
+                            <div class="detalle">
+                                <span class="etiqueta">Temperatura</span>
+                                <span id="temp-detalle" class="valor">-</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Humedad</span>
+                                <span id="humedad-detalle" class="valor">-</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Sensación Térmica</span>
+                                <span id="sensacion-detalle" class="valor">-</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Velocidad del Viento</span>
+                                <span id="viento-detalle" class="valor">-</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Presión</span>
+                                <span id="presion-detalle" class="valor">-</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta">Visibilidad</span>
+                                <span id="visibilidad-detalle" class="valor">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DE AYUDA -->
+                <div class="info-ayuda">
+                    <h3>💡 Consejos</h3>
+                    <ul>
+                        <li>Ingresa el nombre de cualquier ciudad del mundo</li>
+                        <li>Incluye el país si la ciudad es ambigua (ej: "Madrid, España")</li>
+                        <li>Los datos se actualizan en tiempo real</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Explorador de APIs | Axel Vera y Aragón</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/clima.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty API</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="rick-page">
+    <!-- FONDO DECORATIVO -->
+    <div class="fondo-decorativo rick-bg">
+        <div class="portal-decorativo"></div>
+        <div class="estrellas-rick"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-api header-rick">
+        <div class="contenedor-header">
+            <div class="icono-header rick-icono">
+                <img src="../static/images/rick.png" alt="Rick & Morty API" class="imagen-icono">
+            </div>
+            <h1 class="titulo-api">Rick & Morty API</h1>
+            <p class="subtitulo-api">Descubre personajes de la serie multiversal</p>
+            <p class="descripcion-api">Powered by Rick & Morty API</p>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="contenedor-principal">
+        <!-- SECCIÓN DE BÚSQUEDA -->
+        <section class="seccion-busqueda seccion-rick">
+            <div class="contenedor-busqueda">
+                <div class="titulo-seccion rick-titulo">
+                    <h2>🔍 Buscar Personaje</h2>
+                    <p>Ingresa el ID del personaje para conocer más detalles</p>
+                </div>
+                
+                <form id="formulario-rick" class="formulario-busqueda">
+                    <div class="grupo-busqueda">
+                        <input 
+                            type="text" 
+                            id="rick-input" 
+                            placeholder="Ingresa el ID del personaje..." 
+                            required
+                        >
+                        <button type="submit" class="boton-buscar">
+                            🔍 Buscar
+                        </button>
+                    </div>
+                </form>
+
+                <!-- INDICADOR DE CARGA -->
+                <div id="indicador-carga" class="indicador-carga oculto">
+                    <div class="spinner"></div>
+                    <p>Cargando datos del personaje...</p>
+                </div>
+
+                <!-- MENSAJE DE ERROR -->
+                <div id="mensaje-error" class="mensaje-error oculto"></div>
+
+                <!-- RESULTADOS DEL PERSONAJE -->
+                <div id="resultados-rick" class="resultados-rick oculto">
+                    <div class="tarjeta-rick">
+                        <div class="rick-header">
+                            <img id="imagen-rick" class="imagen-rick" src="" alt="Personaje">
+                            <h2 id="nombre-rick" class="nombre-rick"></h2>
+                        </div>
+
+                        <div class="detalles-rick">
+                            <div class="detalle-rick">
+                                <span class="etiqueta">ID</span>
+                                <span id="id-rick" class="valor">-</span>
+                            </div>
+                            <div class="detalle-rick">
+                                <span class="etiqueta">Estado</span>
+                                <span id="estado-rick" class="valor">-</span>
+                            </div>
+                            <div class="detalle-rick">
+                                <span class="etiqueta">Especie</span>
+                                <span id="especie-rick" class="valor">-</span>
+                            </div>
+                            <div class="detalle-rick">
+                                <span class="etiqueta">Género</span>
+                                <span id="genero-rick" class="valor">-</span>
+                            </div>
+                            <div class="detalle-rick">
+                                <span class="etiqueta">Origen</span>
+                                <span id="origen-rick" class="valor">-</span>
+                            </div>
+                            <div class="detalle-rick">
+                                <span class="etiqueta">Ubicación</span>
+                                <span id="ubicacion-rick" class="valor">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DE AYUDA -->
+                <div class="info-ayuda">
+                    <h3>💡 Consejos</h3>
+                    <ul>
+                        <li>Busca por ID numérico del personaje (1-826)</li>
+                        <li>Personajes principales: Rick (1), Morty (2), Summer (3)</li>
+                        <li>Obtén información completa de cada personaje</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Explorador de APIs | Axel Vera y Aragón | Powered by Rick & Morty API</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/rick.js"></script>
+</body>
+</html>

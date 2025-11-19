@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Países - REST Countries</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="paises-page">
+    <!-- FONDO DECORATIVO -->
+    <div class="fondo-decorativo paises-bg">
+        <div class="globo-decorativo"></div>
+        <div class="mapa-fondo"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-api header-paises">
+        <div class="contenedor-header">
+            <div class="icono-header paises-icono">
+                <img src="../static/images/paises.png" alt="API de Países" class="imagen-icono">
+            </div>
+            <h1 class="titulo-api">API de Países</h1>
+            <p class="subtitulo-api">Explora información detallada de países del mundo</p>
+            <p class="descripcion-api">Powered by REST Countries API</p>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="contenedor-principal">
+        <!-- SECCIÓN DE BÚSQUEDA -->
+        <section class="seccion-busqueda seccion-paises">
+            <div class="contenedor-busqueda">
+                <div class="titulo-seccion paises-titulo">
+                    <h2>🔍 Buscar País</h2>
+                    <p>Ingresa el nombre de un país para obtener información detallada</p>
+                </div>
+                
+                <form id="formulario-paises" class="formulario-busqueda">
+                    <div class="grupo-busqueda">
+                        <input 
+                            type="text" 
+                            id="pais-input" 
+                            placeholder="Ingresa el nombre del país..." 
+                            required
+                        >
+                        <button type="submit" class="boton-buscar">
+                            🔍 Buscar
+                        </button>
+                    </div>
+                </form>
+
+                <!-- INDICADOR DE CARGA -->
+                <div id="indicador-carga" class="indicador-carga oculto">
+                    <div class="spinner"></div>
+                    <p>Cargando datos del país...</p>
+                </div>
+
+                <!-- MENSAJE DE ERROR -->
+                <div id="mensaje-error" class="mensaje-error oculto"></div>
+
+                <!-- RESULTADOS DEL PAÍS -->
+                <div id="resultados-pais" class="resultados-pais oculto">
+                    <div class="tarjeta-pais">
+                        <div class="pais-header">
+                            <div class="bandera-contenedor">
+                                <img id="bandera-pais" class="bandera-pais" src="" alt="Bandera">
+                            </div>
+                            <h2 id="nombre-pais" class="nombre-pais"></h2>
+                        </div>
+
+                        <div class="detalles-pais">
+                            <div class="detalle-pais">
+                                <span class="etiqueta">Capital</span>
+                                <span id="capital-pais" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pais">
+                                <span class="etiqueta">Población</span>
+                                <span id="poblacion-pais" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pais">
+                                <span class="etiqueta">Región</span>
+                                <span id="region-pais" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pais">
+                                <span class="etiqueta">Área (km²)</span>
+                                <span id="area-pais" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pais">
+                                <span class="etiqueta">Idiomas</span>
+                                <span id="idiomas-pais" class="valor">-</span>
+                            </div>
+                            <div class="detalle-pais">
+                                <span class="etiqueta">Zonas Horarias</span>
+                                <span id="zonas-pais" class="valor">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DE AYUDA -->
+                <div class="info-ayuda">
+                    <h3>💡 Consejos</h3>
+                    <ul>
+                        <li>Ingresa el nombre completo o parcial del país</li>
+                        <li>También puedes buscar por código ISO (ej: "ESP" para España)</li>
+                        <li>Los datos incluyen información de población, área y más</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Explorador de APIs | Axel Vera y Aragón | Powered by REST Countries</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/paises.js"></script>
+</body>
+</html>
